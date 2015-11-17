@@ -7,3 +7,6 @@ This is a crude, example application which demonstrates using a ServiceWorker to
 * [Your first offline web app | Web Fundamentals - Google Developers](https://developers.google.com/web/fundamentals/getting-started/your-first-offline-web-app/)
 * [Making an offline web app with Service Workers | Ole Michelsen](http://ole.michelsen.dk/blog/making-an-offline-webapp-with-service-workers.html)
 * [slightlyoff / ServiceWorker](https://github.com/slightlyoff/ServiceWorker)
+
+## Live Example
+This code has been uploaded to a [Heroku application](https://hots-serviceworker.herokuapp.com/). If you load it once with internet connection then disable your network (either via throttling in dev tools or physically disconnecting from your network) and refresh the application, it should load instantly (served from ServiceWorker) and be fully usable.
