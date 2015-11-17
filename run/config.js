@@ -85,6 +85,14 @@ module.exports = {
                 ]
             }
         },
+        server: {
+            webserverSettings: {
+                port: process.env.PORT || 5000,
+                host: '0.0.0.0',
+                https: false,
+                open: true
+            }
+        },
         styles: {
             /**
              * A folder path that is prefixed with the global `destPath` to give a

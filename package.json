@@ -17,7 +17,7 @@
   },
   "scripts": {
     "postinstall": "gulp build",
-    "start": "node server.js",
+    "start": "gulp server",
     "jscs": "gulp jscs",
     "lint": "gulp lint",
     "jscs-via-commit": "gulp jscs --via-commit",
@@ -41,7 +41,7 @@
     "gulp-jshint": "1.11.2",
     "jshint-stylish": "2.0.1",
     "gulp-imagemin": "2.3.0",
-    "express": "4.13.3",
+    "gulp-webserver": "0.9.1",
     "gulp-sass": "2.0.3",
     "gulp-autoprefixer": "2.3.1",
     "webpack-stream": "2.1.1",
