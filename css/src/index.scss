@@ -93,5 +93,20 @@ body {
 }
 
 .hero-grid__hero--active::after {
-    border-color: #F00;
+    animation: pulsing-border 600ms infinite;
+}
+
+
+@keyframes pulsing-border {
+    0% {
+        border-color: #3066AE;
+    }
+
+    50% {
+        border-color: #9F7DED;
+    }
+
+    100% {
+        border-color: #3066AE;
+    }
 }
