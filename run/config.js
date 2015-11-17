@@ -167,7 +167,8 @@ module.exports = {
                 watch: false,
                 entry: {
                     main: './js/src/index.js',
-                    '../serviceworker': './js/src/serviceworker.js'
+                    '../serviceworker': './js/src/serviceworker.js',
+                    '../js/serviceworker-cache-polyfill': './js/src/serviceworker-cache-polyfill.js'
                 },
                 output: {
                     filename: '[name].js'

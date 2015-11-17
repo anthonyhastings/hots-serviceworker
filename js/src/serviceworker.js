@@ -1,6 +1,9 @@
 /* global self:false, caches:false */
 'use strict';
 
+// Polyfilling the `addAll` method of Cache.
+self.importScripts('/js/serviceworker-cache-polyfill.js');
+
 /**
  * Installation is attempted when the downloaded file is found
  * to be new — either different to an existing service worker
