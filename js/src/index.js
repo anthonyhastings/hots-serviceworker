@@ -1,5 +1,7 @@
 (function() {
 
+    'use strict';
+
     /**
      * Finds sibling elements to the one specified.
      *
@@ -18,7 +20,7 @@
         }
 
         return siblings;
-    };
+    }
 
     /**
      * Pauses audio from sibling heroes and also removes
@@ -28,8 +30,8 @@
      * @param {Object} event - DOM Event.
      */
     function onHeroClick(event) {
-        var targetHero = event.srcElement.parentNode,
-            siblingHeroes = getSiblings(targetHero);
+        var targetHero = event.srcElement.parentNode;
+        var siblingHeroes = getSiblings(targetHero);
 
         siblingHeroes.forEach(function(siblingHero) {
             let siblingHeroAudioElement = siblingHero.querySelector('audio');
@@ -39,7 +41,7 @@
         });
 
         setCurrentHero(targetHero);
-    };
+    }
 
     /**
      * Plays the corresponding audio file for the
@@ -63,7 +65,9 @@
     var heroes = Array.prototype.slice.call(document.querySelectorAll('.hero-grid__avatar'));
 
     // Binding an event listener to each hero.
-    heroes.forEach((hero) => { hero.addEventListener('click', onHeroClick); });
+    heroes.forEach((hero) => {
+        hero.addEventListener('click', onHeroClick);
+    });
 
     // Check localstorage for an existing key and highlight appropriate hero.
     var existingHeroSelection = window.localStorage.getItem('currentHero');
@@ -74,7 +78,7 @@
 
     // Registering our service worker for offline capabilities.
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/serviceworker.js', { scope: '/' })
+        navigator.serviceWorker.register('/serviceworker.js', {scope: '/'})
             .then(function(reg) {
                 console.info('ServiceWorker::registered', reg);
             })
@@ -83,4 +87,4 @@
             });
     }
 
-}())
+}());

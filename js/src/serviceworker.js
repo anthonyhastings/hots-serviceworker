@@ -1,3 +1,6 @@
+/* global self:false, caches:false */
+'use strict';
+
 /**
  * Installation is attempted when the downloaded file is found
  * to be new — either different to an existing service worker
@@ -52,7 +55,7 @@ self.addEventListener('install', function(event) {
             addAssets.then(function() {
                 console.log('ServiceWorker::cacheAddAll');
             }).catch(function() {
-                console.error('ServiceWorker::cacheAddAll')
+                console.error('ServiceWorker::cacheAddAll');
             });
 
             return addAssets;
