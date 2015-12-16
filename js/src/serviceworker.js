@@ -27,6 +27,7 @@ self.addEventListener('install', function(event) {
         caches.open('hots').then(function(cache) {
             var addAssets = cache.addAll([
                 '/',
+                '/favicon.ico',
                 '/css/main.css',
                 '/js/main.js',
                 '/img/jaina.jpg',
