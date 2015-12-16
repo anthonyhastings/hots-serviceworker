@@ -48,7 +48,7 @@ body {
     position: relative;
 
     cursor: pointer;
-    transition: opacity 300ms;
+    transition: opacity 150ms;
 
     @media (min-width: 800px) {
         flex-basis: calc(100% / 6);
@@ -130,6 +130,21 @@ body {
 // Selects every hero besides the active one and the one currently hovered, and only if the randomisation isn't happening.
 .hero-grid__container:not(.hero-grid__container--randomising):hover .hero-grid__hero:not(:hover):not(.hero-grid__hero--active) {
     opacity: 0.5;
+}
+
+.hero-grid__container--randomising {
+    .hero-grid__hero {
+        opacity: 0.5;
+    }
+
+    .hero-grid__hero--selection {
+        opacity: 1;
+
+        &::after {
+            animation: pulsing-border 600ms infinite;
+            animation-play-state: paused;
+        }
+    }
 }
 
 .hero-grid__hero--active::after {
