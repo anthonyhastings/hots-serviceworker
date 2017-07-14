@@ -12,8 +12,8 @@
     "Anthony Hastings <ar.hastings@gmail.com>"
   ],
   "engines": {
-    "node": "5.0.0",
-    "npm": "3.3.6"
+    "node": "6.11.1",
+    "npm": "3.10.10"
   },
   "scripts": {
     "postinstall": "gulp build",
